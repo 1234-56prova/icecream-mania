@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IceCreams = ({ icecream }) => {
-    const { image, flavour, name, price, about } = icecream;
+    const { image, name, price } = icecream;
     return (
         <div class="m-8">
             <div className="w-96">

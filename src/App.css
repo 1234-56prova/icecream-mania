@@ -1,0 +1,9 @@
+.w-trend {
+    margin-left: 550px;
+}
+
+@media screen and (min-width: 576px) {
+    .w-trend {
+        margin-left: auto;
+    }
+}
