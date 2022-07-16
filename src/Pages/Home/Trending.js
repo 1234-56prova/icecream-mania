@@ -1,8 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
+import useIcecream from '../../hooks/useIcecream';
+import Trends from './Trends';
 
 const Trending = () => {
-
+    const [icecreams] = useIcecream();
+    const {location} = useLocation();
+    console.log(location);
     return (
         <div>
             <div class="tabs">

@@ -1,11 +1,12 @@
 import React from 'react';
 
 const IceCreams = ({ icecream }) => {
+
     const { image, name, price } = icecream;
     return (
         <div class="m-8">
             <div className="w-96">
-                <img className='border rounded-lg border-4' src={image} alt="" />
+                <img className='rounded-lg border-4' src={image} alt="" />
             </div>
             <div className='text-center'>
                 <p className='text-2xl font-bold font-serif text-amber-800'>{name}</p>
