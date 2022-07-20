@@ -1,42 +1,68 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+
 const Header = () => {
+
     return (
         <div>
-            <div className="navbar bg-amber-200">
+            <div className="navbar bg-black text-white">
                 <div className="navbar-start">
-                    <div className="navbar-start">
-                        <div className="dropdown">
-                            <label tabindex="0" className="btn btn-ghost btn-circle">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                            </label>
-                            <ul tabindex="0" className="menu menu-compact dropdown-content mt-3 p-2 bg-lime-700 text-amber-200 rounded-box w-52">
-                                <li><Link className='hover:text-lime-700 hover:bg-amber-200' to='/'>Homepage</Link></li>
-                                <li><Link className='hover:text-lime-700 hover:bg-amber-200' to='/about-us'>About</Link></li>
-                                <li><Link className='hover:text-lime-700 hover:bg-amber-200' to='/blogs'>Blogs</Link></li>
-                                <li><Link className='hover:text-lime-700 hover:bg-amber-200' to='/shop'>Shops</Link></li>
+                    <div className="dropdown">
+                        <label tabindex="0" className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+                        <ul tabindex="0" className="bg-black text-white menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Home</Link></li>
+                            <li tabindex="0">
+                                <Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin justify-between' >
+                                    Menu
+                                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                                </Link>
+                                <ul className="p-2 bg-black text-white">
+                                    <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
+                                    <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
+                                </ul>
+                            </li>
+                            <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
+                            <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
+                            <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
+                            <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
+                        </ul>
+                    </div>
+                    <ul className="menu menu-horizontal hidden lg:flex p-0">
+                        <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Home</Link></li>
+                        <li tabindex="0">
+                            <Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>
+                                Menu
+                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                            </Link>
+                            <ul className="p-2 bg-black text-white">
+                                <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
+                                <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
                             </ul>
-                        </div>
-                    </div>
+                        </li>
+                        <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
+                    </ul>
                 </div>
-                <div className="navbar-center">
-                    <img src="https://i.ibb.co/kyZS5Cd/cream.png" width='200px' alt="" />
+                <div className="navbar-center lg:flex">
+                    <Link to='/' className='sm:visible font-semibold ml-20 hover:text-orange-300 uppercase font-thin' ><img className='lg:w-32 w-16 lg:p-4' src="https://xpressrow.com/wp/cafena/wp-content/themes/cafena/assets/img/logo/logo_white.png" alt="" /></Link>
                 </div>
-                <div className="navbar-end">
-                    <div className="form-control">
-                        <input type="text" placeholder="Search" className="input input-bordered" />
-                    </div>
-                    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                    <button className="btn btn-ghost btn-circle">
-                        <div className='indicator'>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-                            <span className="badge badge-xs badge-primary indicator-item"></span>
-
-                        </div>
-                    </button>
+                <div className="navbar-end hidden lg:flex">
+                    <ul className="menu menu-horizontal p-0">
+                        <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
+                        <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
+                        <li><Link to='/' className='font-semibold ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
+                    </ul>
+                    <label class="btn btn-circle swap swap-rotate">
+                        <input type="checkbox" />
+                        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+                        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
+                    </label>
                 </div>
             </div>
-
         </div>
 
     );

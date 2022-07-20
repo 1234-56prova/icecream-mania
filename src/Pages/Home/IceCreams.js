@@ -4,7 +4,7 @@ const IceCreams = ({ icecream }) => {
 
     const { image, name, price } = icecream;
     return (
-        <div class="m-8">
+        <div className="m-8">
             <div className="w-96">
                 <img className='rounded-lg border-4' src={image} alt="" />
             </div>
