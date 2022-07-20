@@ -2,26 +2,17 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="carousel w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/xXtsh4S/banner-1.png" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/8PYY8JP/banner-2.png" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/gMH4LFc/banner-3.png" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
+        <div class="hero min-h-screen bg-image">
+            <div class="hero-overlay bg-opacity-40"></div>
+            <div class="hero-content text-neutral-content">
+                <div >
+                    <h1 class="mb-5 uppercase text-6xl font-bold">roasted coffee <br />
+                        for you</h1>
+                    <p class="mb-5">The coffee is brewed by first roasting the green coffee beans over hot coals in a brazier. given an opportunity to sample.</p>
+                    <div>
+                        <button class="btn btn-wide m-4 hover:bg-inherit bg-amber-900 ">TASTE COFFEE</button>                        
+                        <button class="btn btn-wide m-4 hover:bg-amber-900 bg-inherit">READ MORE</button>                        
+                    </div>
                 </div>
             </div>
         </div>

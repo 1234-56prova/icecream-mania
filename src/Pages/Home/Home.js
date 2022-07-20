@@ -6,7 +6,7 @@ import Trending from './Trending';
 const Home = () => {
     return (
         <div>
-            
+            <Banner></Banner>
         </div>
     );
 };
