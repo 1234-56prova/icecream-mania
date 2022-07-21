@@ -2,10 +2,13 @@
     background-image: url('https://i.ibb.co/xzfP3Fn/coffee.jpg');
 }
 
-.bg-linear {
-    background: linear-gradient(black, gray);
+.reviewers {
+    margin-left: 710px;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
+    .reviewers{
+         margin-left: 200px; 
+    }
     
 }
