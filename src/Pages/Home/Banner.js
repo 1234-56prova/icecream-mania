@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div class="hero min-h-screen bg-image">
+        <div class="hero lg:min-h-screen bg-image">
             <div class="hero-overlay bg-opacity-40"></div>
             <div class="hero-content text-neutral-content">
                 <div >

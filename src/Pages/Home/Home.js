@@ -1,12 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
-import Shop from './Shop';
-import Trending from './Trending';
+import History from './History';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <History></History>
         </div>
     );
 };
