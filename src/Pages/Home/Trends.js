@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useCoffees from '../../hooks/useCoffees';
 import Trending from './Trending';
 
 const Trends = () => {
-    const [coffees, setCoffees] = useState([]);
-
-    useEffect(() => {
-        fetch('https://raw.githubusercontent.com/1234-56prova/data/main/coffee-beans.json')
-            .then(res => res.json())
-            .then(data => setCoffees(data));
-
-    }, [])
+    const [coffees, setCoffees] = useCoffees();
     return (
         <div className=''>
             <p className='text-center'><small className='bg-amber-900 p-1 rounded-sm text-white font-bold '>POPULAR PRODUCTS</small></p>
