@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
+import Bookings from './Bookings';
 import History from './History';
 import Machine from './Machine';
 import Products from './Products';
@@ -18,7 +19,7 @@ const Home = () => {
             <h1 className='text-white font-bold text-5xl text-center'>OUR CUSTOMERS REVIEW</h1>
             <img className='w-32 reviewers' src="https://i.ibb.co/FXBJbqV/quotation.png" alt="" />
             <Reviews></Reviews>
-
+            <Bookings></Bookings>
             <hr />
         </div>
     );
