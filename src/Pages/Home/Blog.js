@@ -11,7 +11,7 @@ const Blog = (props) => {
                 <img className='w-full zoom' src={image} alt="" />
             </div>
             <div className='p-3'>
-                <div class="text-sm breadcrumbs text-orange-200">
+                <div className="text-sm breadcrumbs text-orange-200">
                     <ul>
                         <li><Link to='/'>CAFENA</Link></li>
                         <li><Link to='/'>{author}</Link></li>

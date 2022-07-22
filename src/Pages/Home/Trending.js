@@ -5,9 +5,9 @@ const Trending = ({ coffee }) => {
 
     return (
         <div className='flex lg:m-16 m-12 border glass'>
-            <div class="avatar pt-10 lg:pt-2 lg:pl-10">
-                <div class="lg:w-32 w-20 lg:h-full h-20 rounded-full">
-                    <img src={image} />
+            <div className="avatar pt-10 lg:pt-2 lg:pl-10">
+                <div className="lg:w-32 w-20 lg:h-full h-20 rounded-full">
+                    <img src={image}  alt=''/>
                 </div>
             </div>
             <p className='text-white m-10 font-bold text-xl'>{name}</p>
