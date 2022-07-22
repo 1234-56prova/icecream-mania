@@ -1,7 +1,4 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import useIcecream from '../../hooks/useCoffees';
-import Trends from './Trends';
 
 const Trending = ({ coffee }) => {
     const { image, name, price } = coffee;
