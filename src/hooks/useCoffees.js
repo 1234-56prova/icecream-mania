@@ -4,7 +4,7 @@ const useCoffees = () => {
     const [coffees, setCoffees] = useState([]);
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/1234-56prova/data/main/coffee-beans.json')
+        fetch('https://polar-journey-98399.herokuapp.com/coffees')
             .then(res => res.json())
             .then(data => setCoffees(data));
 

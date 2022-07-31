@@ -26,7 +26,7 @@ const Login = () => {
         if (user || gUser) {
             navigate(from, { replace: true });
         }
-    }, [])
+    })
 
     if (loading || gLoading) {
         return <Loading></Loading>

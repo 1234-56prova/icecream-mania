@@ -1,8 +1,5 @@
-import { signOut } from 'firebase/auth';
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../firebase.init';
 
 const Header = () => {
 
@@ -26,10 +23,10 @@ const Header = () => {
                                     <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
                                 </ul>
                             </li>
-                            <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
-                            <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
-                            <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
-                            <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
+                            <li><Link to='/about' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
+                            <li><Link to='/blogs' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
+                            <li><Link to='/login' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
+                            <li><Link to='/signUp' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
                         </ul>
                     </div>
                     <ul className="menu menu-horizontal hidden lg:flex p-0">
@@ -40,11 +37,11 @@ const Header = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </Link>
                             <ul className="p-2 bg-black text-white">
-                                <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
-                                <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
+                                <li><Link to='/coffees' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
+                                <li><Link to='#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
                             </ul>
                         </li>
-                        <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
+                        <li><Link to='/about' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-center lg:flex">
@@ -52,9 +49,9 @@ const Header = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
-                        <li><Link to='/' className='ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
-                        <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
-                        <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
+                        <li><Link to='/blogs' className='ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
+                        <li><Link to='/login' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
+                        <li><Link to='/signUp' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
                     </ul>
                     <label className="btn btn-circle swap swap-rotate">
                         <input type="checkbox" />

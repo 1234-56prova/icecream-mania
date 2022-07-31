@@ -4,7 +4,7 @@ const Machine = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img className='w-1/3' src="https://xpressrow.com/wp/cafena/wp-content/uploads/2022/05/product-big.png" className="max-w-sm rounded-lg shadow-2xl" />
+                <img src="https://xpressrow.com/wp/cafena/wp-content/uploads/2022/05/product-big.png" alt='' className="max-w-sm w-1/3 rounded-lg shadow-2xl" />
                 <div  className='w-2/3'>
                     <h1 className="text-5xl text-white font-bold">COFFEE MACHINE,BUY FOR HOME</h1>
                     <p className="py-6 text-gray-300 w-96">
