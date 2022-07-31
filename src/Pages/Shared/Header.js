@@ -1,3 +1,4 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
@@ -6,6 +7,9 @@ import auth from '../../firebase.init';
 const Header = () => {
     const [user] = useAuthState(auth);
 
+    const logOut = async () => {
+        await signOut(auth);
+    }
     return (
         <div>
             <div className="navbar bg-black text-white">
@@ -28,7 +32,7 @@ const Header = () => {
                             </li>
                             <li><Link to='/about' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
                             <li><Link to='/blogs' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
-                            {user ? <li><Link to='/logout' className=' ml-20 hover:text-orange-300 uppercase font-thin'>log Out</Link></li>
+                            {user ? <li><Link to='/' onClick={logOut} className=' ml-20 hover:text-orange-300 uppercase font-thin'>log Out</Link></li>
                                 : <ul>
                                     <li><Link to='/login' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
                                     <li><Link to='/signUp' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
@@ -56,12 +60,12 @@ const Header = () => {
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         <li><Link to='/blogs' className='ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
-                        {user ? <li><Link to='/logout' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Logout</Link></li>
-                            : <ul>
+                        {user ? <li><Link to='/' onClick={logOut} className=' ml-20 hover:text-orange-300 uppercase font-thin'>Logout</Link></li>
+                            : <ul className='flex'>
                                 <li><Link to='/login' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
                                 <li><Link to='/signUp' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
                             </ul>}
-                        </ul>
+                    </ul>
                     <label className="btn btn-circle swap swap-rotate">
                         <input type="checkbox" />
                         <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
