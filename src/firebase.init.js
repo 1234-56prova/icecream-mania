@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.DB_API_KEY,
-  authDomain: process.env.DB_AUTH_DOMAIN,
-  projectId: process.env.DB_PROJECT_ID,
-  storageBucket: process.env.DB_STORAGE_BUCKET,
-  messagingSenderId: process.env.DB_MESSAGING_SENDER_ID,
-  appId: process.env.DB_APP_ID
+  apiKey: "AIzaSyDX9hLHKeKd5cntrJ6IWOAWo90nfkCbtbc",
+  authDomain: "smooth-sensations.firebaseapp.com",
+  projectId: "smooth-sensations",
+  storageBucket: "smooth-sensations.appspot.com",
+  messagingSenderId: "1016683819371",
+  appId: "1:1016683819371:web:954a9d6ee30898e4ae9c2e"
 };
 
 // Initialize Firebase

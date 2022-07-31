@@ -41,15 +41,15 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <p className='text-5xl mt-20 text-center '>Login</p>
-            <div className="card lg:ml-60 mt-5 lg:mr-60 lg:card-side sm:visible bg-base-100 shadow-xl">
+        <div className='bg-black'>
+            <p className='text-5xl mt-20 text-center text-white'>Login</p>
+            <div className="card lg:ml-60 mt-5 lg:mr-60 lg:card-side sm:visible shadow-xl">
                 <figure><img src="https://i.ibb.co/yNDjdB0/hero-passwordpng.png" width='400px' alt="Album" /></figure>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
                             <input
                                 type="email"
@@ -73,7 +73,7 @@ const Login = () => {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-white">Password</span>
                             </label>
                             <input
                                 type="password"
@@ -97,13 +97,13 @@ const Login = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
+                        <input className='btn w-full max-w-xs glass text-white' type="submit" value="Login" />
                     </form>
-                    <p><small>New to Doctors Portal <Link className='text-primary' to="/register">Create New Account</Link></small></p>
+                    <p><small className='text-white'>New to Doctors Portal <Link className='text-primary' to="/register">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline"
+                        className="btn glass max-w-xs text-white"
                     >Continue with Google</button>
                 </div>
             </div>
