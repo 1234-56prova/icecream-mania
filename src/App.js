@@ -5,6 +5,7 @@ import Coffees from './Pages/AllCoffees/Coffees';
 import Login from './Pages/Auth/Login/Login';
 import SignUp from './Pages/Auth/SignUp/SignUp';
 import Blogs from './Pages/Blogs/Blogs';
+import BuyNow from './Pages/Home/BuyNow';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound';
 import Footer from './Pages/Shared/Footer';
@@ -22,6 +23,7 @@ function App() {
         <Route path='/coffees' element={<Coffees></Coffees>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signUp' element={<SignUp/>}></Route>
+        <Route path='/coffees/:id' element={<BuyNow/>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

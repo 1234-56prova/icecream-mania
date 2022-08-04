@@ -6,7 +6,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Blog = (props) => {
     const { image, name, author } = props;
     return (
-        <div className='m-10 border border-gray-700'>
+        <div className=' border border-gray-700'>
             <div className=''>
                 <img className='w-full zoom' src={image} alt="" />
             </div>

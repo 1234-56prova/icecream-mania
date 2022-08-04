@@ -6,7 +6,7 @@ import Loading from '../Loading';
 import { useForm } from 'react-hook-form';
 
 const Login = () => {
-
+    
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [

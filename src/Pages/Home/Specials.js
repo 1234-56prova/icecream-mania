@@ -3,7 +3,7 @@ import React from 'react';
 const Specials = ({ coffee }) => {
     const { image, name, price } = coffee;
     return (
-        <div className="border border-gray-400 m-10 w-96 shadow-xl">
+        <div className="border border-gray-400 m-10 shadow-xl">
             <figure><img src={image} className='p-3' alt="Shoes" /></figure>
             <div className=" bg-black m-2">
                 <p className='text-white text-center uppercase'>Rating <div className="rating">
