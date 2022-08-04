@@ -30,7 +30,7 @@ const Header = () => {
                                     <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
                                 </ul>
                             </li>
-                            <li><Link to='/about' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
+                            <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
                             <li><Link to='/blogs' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
                             {user ? <li><Link to='/' onClick={logOut} className=' ml-20 hover:text-orange-300 uppercase font-thin'>log Out</Link></li>
                                 : <ul>
@@ -51,7 +51,7 @@ const Header = () => {
                                 <li><Link to='#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
                             </ul>
                         </li>
-                        <li><Link to='/about' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
+                        <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-center lg:flex">

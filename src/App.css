@@ -6,17 +6,9 @@
     margin-left: 710px;
 }
 
-.zoom {
-    transition: transform .5s;
-}
-
-.zoom:hover {
-    transform: scale(1.2);
-}
-
 @media screen and (max-width: 576px) {
-    .reviewers{
-         margin-left: 200px; 
+    .reviewers {
+        margin-left: 200px;
     }
-    
+
 }
