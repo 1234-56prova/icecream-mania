@@ -6,7 +6,7 @@ const BuyNow = () => {
     const [coffee, setCoffee] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/coffees/${id}`)
+        fetch(`https://polar-journey-98399.herokuapp.com/coffees/${id}`)
         .then(res => res.json())
         .then(data => setCoffee(data));
 

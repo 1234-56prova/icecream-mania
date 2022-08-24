@@ -31,7 +31,7 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
-                            <li><Link to='/blogs' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
+                            <li><Link to='/cart' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Cart</Link></li>
                             {user ? <li><Link to='/' onClick={logOut} className=' ml-20 hover:text-orange-300 uppercase font-thin'>log Out</Link></li>
                                 : <ul>
                                     <li><Link to='/login' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
@@ -48,7 +48,7 @@ const Header = () => {
                             </Link>
                             <ul className="p-2 bg-black text-white">
                                 <li><Link to='/coffees' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
-                                <li><Link to='#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
+                                <li><Link to='/coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
                             </ul>
                         </li>
                         <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
@@ -59,7 +59,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
-                        <li><Link to='/blogs' className='ml-20 hover:text-orange-300 uppercase font-thin'>Blogs</Link></li>
+                        <li><Link to='/cart' className='ml-20 hover:text-orange-300 uppercase font-thin'>Cart</Link></li>
                         {user ? <li><Link to='/' onClick={logOut} className=' ml-20 hover:text-orange-300 uppercase font-thin'>Logout</Link></li>
                             : <ul className='flex'>
                                 <li><Link to='/login' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Login</Link></li>
