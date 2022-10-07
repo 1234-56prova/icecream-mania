@@ -25,15 +25,14 @@ function App() {
         <Route path='/about-us' element={<About></About>}></Route>
         <Route path='/coffees' element={<Coffees></Coffees>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/signUp' element={<SignUp/>}></Route>
-        <Route path='/coffees/:id' element={<BuyNow/>}></Route>
-        <Route path='/cart' element={<Cart></Cart>}>
-          <Route path='my-products' element={<MyCart></MyCart>}></Route>
-          <Route path='profile/:name' element={<MyProfile></MyProfile>}></Route>
-        </Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
-      </Routes>
-      <Footer></Footer>
+        <Route path='/signUp' element={<SignUp />}></Route>
+        <Route path='/coffees/:id' element={<BuyNow />}></Route>
+        <Route path='/dashboard' element={<Cart />}>
+          <Route index element={<MyCart />}></Route>
+          <Route path='profile' element={<MyProfile/>}></Route>
+          </Route>
+        </Routes>
+        <Footer></Footer>
     </div>
   );
 }

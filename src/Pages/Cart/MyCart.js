@@ -1,31 +1,25 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import CartProduct from './CartProduct';
 
 const MyCart = () => {
-    const [products, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/cart')
+        fetch('https://polar-journey-98399.herokuapp.com/cart')
         .then(res => res.json())
-        .then(data => setProduct(data));
+        .then(data => setProducts(data));
     
     }, [])
 
     return (
-        <div>
-            {
-                products.map(product => {
-
-                    <div className='flex items-center bg-white'>
-                        <p>Price: {product.price}</p>
-                        <p>Company</p>
-                        <p>Price</p>
-                    </div>
-
-                })
-            }
+        <div className='m-0 text-slate-50'>
+           <p>Ilma Prova</p>
+           {
+            products.map(product => <CartProduct product={product} />)
+           }
         </div>
     );
 };
