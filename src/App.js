@@ -6,8 +6,6 @@ import Login from './Pages/Auth/Login/Login';
 import SignUp from './Pages/Auth/SignUp/SignUp';
 import Blogs from './Pages/Blogs/Blogs';
 import Cart from './Pages/Cart/Cart';
-import MyCart from './Pages/Cart/MyCart';
-import MyProfile from './Pages/Cart/MyProfile';
 import BuyNow from './Pages/Home/BuyNow';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound';
@@ -27,10 +25,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
         <Route path='/coffees/:id' element={<BuyNow />}></Route>
-        <Route path='/dashboard' element={<Cart />}>
-          <Route index element={<MyCart />}></Route>
-          <Route path='profile' element={<MyProfile/>}></Route>
-          </Route>
+        <Route path='/cart' element={<Cart />}></Route>
         </Routes>
         <Footer></Footer>
     </div>
