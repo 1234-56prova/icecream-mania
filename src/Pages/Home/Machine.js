@@ -2,7 +2,7 @@ import React from 'react';
 
 const Machine = () => {
     return (
-        <div className="hero min-h-screen">
+        <div id='coffee-machine' className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src="https://xpressrow.com/wp/cafena/wp-content/uploads/2022/05/product-big.png" alt='' className="max-w-sm w-1/3 rounded-lg shadow-2xl" />
                 <div  className='w-2/3'>

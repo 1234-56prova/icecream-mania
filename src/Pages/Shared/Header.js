@@ -1,5 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -27,7 +28,7 @@ const Header = () => {
                                 </Link>
                                 <ul className="p-2 bg-black text-white">
                                     <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
-                                    <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
+                                    <li><NavHashLink to='/home#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</NavHashLink></li>
                                 </ul>
                             </li>
                             <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
@@ -49,7 +50,7 @@ const Header = () => {
                             </Link>
                             <ul className="p-2 bg-black text-white">
                                 <li><Link to='/coffees' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
-                                <li><Link to='/coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</Link></li>
+                                <li><NavHashLink smooth to='/home#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</NavHashLink></li>
                             </ul>
                         </li>
                         <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>
@@ -67,11 +68,6 @@ const Header = () => {
                                 <li><Link to='/signUp' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Sign Up</Link></li>
                             </ul>}
                     </ul>
-                    <label className="btn btn-circle swap swap-rotate">
-                        <input type="checkbox" />
-                        <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
-                        <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
-                    </label>
                 </div>
             </div>
         </div>
