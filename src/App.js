@@ -26,6 +26,7 @@ function App() {
         <Route path='/signUp' element={<SignUp />}></Route>
         <Route path='/coffees/:id' element={<BuyNow />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
         </Routes>
         <Footer></Footer>
     </div>
