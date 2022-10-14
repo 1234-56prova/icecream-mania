@@ -27,8 +27,8 @@ const Header = () => {
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </Link>
                                 <ul className="p-2 bg-black text-white">
-                                    <li><Link to='/' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
-                                    <li><NavHashLink to='/home#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</NavHashLink></li>
+                                    <li><Link to='/coffees' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee</Link></li>
+                                    <li><NavHashLink smooth to='/home#coffee-machine' className=' ml-20 hover:text-orange-300 uppercase font-thin'>Coffee machines</NavHashLink></li>
                                 </ul>
                             </li>
                             <li><Link to='/about-us' className=' ml-20 hover:text-orange-300 uppercase font-thin'>About</Link></li>

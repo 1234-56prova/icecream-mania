@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Machine = () => {
+    const navigate = useNavigate();
+
     return (
         <div id='coffee-machine' className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -12,7 +15,7 @@ const Machine = () => {
                     </p>
                     <p className="py-6 text-gray-300 ">
                         mattis nunc. Praesent ut quam quis quam venenatis fringilla. Morbi vestibulum id tellus mmodo mattis.                    </p>
-                    <button className="btn bg-orange-200 btn-wide">Discover Now</button>
+                    <a href='https://www.amazon.com/s?k=coffee+machine'><button className="btn bg-orange-200 btn-wide">Discover Now</button></a>
                 </div>
             </div>
         </div>
