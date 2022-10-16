@@ -16,7 +16,7 @@ const BuyNow = () => {
 
     })
 
-    const { name, available, about, _id, price, image, company, phone } = coffee;
+    const { name, available, about, price, image, company, phone } = coffee;
 
     const handleCart = (event) => {
         event.preventDefault();
@@ -39,8 +39,17 @@ const BuyNow = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('success');
-                setCoffee(data);
+                const exists = data.name === name;
+                if (exists) {
+
+                    console.log('this item is already added to cart');
+
+                } else {
+
+                    setCoffee(data);
+
+                }
+
             });
     }
     return (

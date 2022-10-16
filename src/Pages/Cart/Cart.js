@@ -19,7 +19,7 @@ const Cart = () => {
     return (
         <div>
             {
-                coffees.map(coffee => <CartCoffee coffee={coffee}></CartCoffee>)
+                coffees.map(coffee => <CartCoffee coffees={coffees} setCoffees={setCoffees} key={coffee._id} coffee={coffee}></CartCoffee>)
             }
         </div>
     );
