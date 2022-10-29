@@ -6,11 +6,11 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Blog = (props) => {
     const { image, name, author } = props;
     return (
-        <div className='m-2 border border-gray-700'>
+        <div className='lg:m-2 border border-gray-700'>
             <div className=''>
-                <img className='w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300' src={image} alt="" />
+                <img className='lg:w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300' src={image} alt="" />
             </div>
-            <div className='p-3'>
+            <div className='lg:p-3'>
                 <div className="text-sm breadcrumbs text-orange-200">
                     <ul>
                         <li><Link to='/'>CAFENA</Link></li>

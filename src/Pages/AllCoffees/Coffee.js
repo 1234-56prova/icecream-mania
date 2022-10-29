@@ -9,7 +9,7 @@ const Coffee = ({coffee}) => {
         navigate(`${id}`);
     }
     return (
-        <div className='m-10 w-96 border border-slate-200'>
+        <div className='lg:m-10 lg:w-96 border border-slate-200'>
             <div>
                 <img src={image} className='w-96 p-3' alt="" />
             </div>
