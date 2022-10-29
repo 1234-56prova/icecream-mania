@@ -6,9 +6,13 @@
     margin-left: 710px;
 }
 
+.trending {
+    width: 10px;
+}
+
 @media screen and (max-width: 576px) {
     .reviewers {
-        margin-left: 200px;
+        margin-left: 150px;
     }
 
 }
